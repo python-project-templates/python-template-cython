@@ -1,9 +1,9 @@
 # Changes here will be overwritten by Copier
-_commit: 36d240f
+_commit: 4dfea45
 _src_path: https://github.com/python-project-templates/base.git
 add_docs: true
 add_extension: cython
-add_wiki: true
+add_wiki: false
 email: 3105306+timkpaine@users.noreply.github.com
 github: python-project-templates
 project_description: A Python project template with compiled Cython extensions
