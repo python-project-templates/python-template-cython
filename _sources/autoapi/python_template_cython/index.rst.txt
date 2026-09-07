@@ -1,0 +1,41 @@
+python_template_cython
+======================
+
+.. py:module:: python_template_cython
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/python_template_cython/_compiled/index
+   /autoapi/python_template_cython/tests/index
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   python_template_cython.__version__
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   python_template_cython.square
+
+
+Package Contents
+----------------
+
+.. py:function:: square(value: int) -> int
+
+.. py:data:: __version__
+   :value: '0.1.0'
+
+

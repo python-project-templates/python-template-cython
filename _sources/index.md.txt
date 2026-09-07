@@ -1,0 +1,29 @@
+```{toctree}
+---
+maxdepth: 2
+hidden: true
+---
+
+
+
+docs/development.md
+
+
+```
+
+# python template cython
+
+A Python project template with compiled Cython extensions
+
+[![Build Status](https://github.com/python-project-templates/python-template-cython/actions/workflows/build.yaml/badge.svg?branch=main&event=push)](https://github.com/python-project-templates/python-template-cython/actions/workflows/build.yaml)
+[![License](https://img.shields.io/github/license/python-project-templates/python-template-cython)](https://github.com/python-project-templates/python-template-cython)
+
+This project demonstrates compiling Python (`_compiled.py`) and Cython (`_native.pyx`)
+modules with Hatchling and hatch-cython. CI builds native wheels for Linux x86_64,
+Linux ARM64, macOS ARM64, and Windows x86_64.
+
+See [How to build and test extensions](docs/development.md) for local development,
+compilation targets, and distribution checks.
+
+Generated with [Copier](https://copier.readthedocs.io/en/stable/) from the
+[Cython variant of the base template](https://github.com/python-project-templates/base).

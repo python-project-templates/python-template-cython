@@ -1,0 +1,15 @@
+python_template_cython.tests
+============================
+
+.. py:module:: python_template_cython.tests
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/python_template_cython/tests/test_extensions/index
+
+

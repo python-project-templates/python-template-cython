@@ -1,0 +1,25 @@
+python_template_cython.tests.test_extensions
+============================================
+
+.. py:module:: python_template_cython.tests.test_extensions
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   python_template_cython.tests.test_extensions.test_compiled_extension
+   python_template_cython.tests.test_extensions.test_square
+   python_template_cython.tests.test_extensions.test_add
+
+
+Module Contents
+---------------
+
+.. py:function:: test_compiled_extension(module)
+
+.. py:function:: test_square(value)
+
+.. py:function:: test_add()
+

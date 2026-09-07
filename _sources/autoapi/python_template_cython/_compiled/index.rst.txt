@@ -1,0 +1,19 @@
+python_template_cython._compiled
+================================
+
+.. py:module:: python_template_cython._compiled
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   python_template_cython._compiled.square
+
+
+Module Contents
+---------------
+
+.. py:function:: square(value: int) -> int
+
