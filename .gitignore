@@ -10,8 +10,8 @@ __pycache__/
 *.so
 *.pyd
 *.dylib
-python_template_cython/*.c
-python_template_cython/*.cpp
+python_template_cython/_compiled.c
+python_template_cython/_native.c
 *.obj
 *.dll
 *.exp

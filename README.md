@@ -3,14 +3,14 @@
 A Python project template with compiled Cython extensions
 
 [![Build Status](https://github.com/python-project-templates/python-template-cython/actions/workflows/build.yaml/badge.svg?branch=main&event=push)](https://github.com/python-project-templates/python-template-cython/actions/workflows/build.yaml)
+[![codecov](https://codecov.io/gh/python-project-templates/python-template-cython/branch/main/graph/badge.svg)](https://codecov.io/gh/python-project-templates/python-template-cython)
 [![License](https://img.shields.io/github/license/python-project-templates/python-template-cython)](https://github.com/python-project-templates/python-template-cython)
+[![PyPI](https://img.shields.io/pypi/v/python-template-cython.svg)](https://pypi.python.org/pypi/python-template-cython)
 
-This project demonstrates compiling Python (`_compiled.py`) and Cython (`_native.pyx`)
-modules with Hatchling and hatch-cython. CI builds native wheels for Linux x86_64,
-Linux ARM64, macOS ARM64, and Windows x86_64.
+## Overview
 
-See [How to build and test extensions](docs/development.md) for local development,
-compilation targets, and distribution checks.
+> [!NOTE]
+> This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
 
-Generated with [Copier](https://copier.readthedocs.io/en/stable/) from the
-[Cython variant of the base template](https://github.com/python-project-templates/base).
+The examples compile Python (`_compiled.py`) and Cython (`_native.pyx`) modules with hatch-cython.
+See the [development guide](docs/development.md) for build and test instructions.

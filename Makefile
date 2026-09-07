@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-.PHONY: develop requirements build install lint-py lint-docs lint lints fix-py fix-docs fix format check-dist check-types checks check test tests coverage show-version patch minor major dist dist-build dist-py-wheel dist-py-sdist dist-check test-dist publish clean help
+.PHONY: develop requirements build install lint-py lint-docs lint lints fix-py fix-docs fix format check-dist check-types checks check test tests coverage show-version patch minor major dist dist-build dist-py-wheel dist-py-sdist dist-check test-dist publish deep-clean clean help
 
 develop:  ## install dependencies and build library
 	uv pip install -e '.[develop]'
@@ -85,8 +85,14 @@ dist:  ## build and check local distributions
 
 publish: dist
 
+deep-clean: ## clean everything from the repository
+	git clean -fdx
+
 clean:  ## remove distribution build output
 	rm -rf build dist python_template_cython.egg-info
 
 help:
-	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "%-24s %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+print-%:
+	@echo '$*=$($*)'

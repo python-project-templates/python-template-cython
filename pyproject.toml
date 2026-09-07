@@ -94,8 +94,8 @@ ignore_errors = true
 fail_under = 50
 
 [tool.hatch.build.targets.sdist]
-include = ["/python_template_cython", "/LICENSE", "/README.md", "/pyproject.toml"]
-exclude = ["*.so", "*.pyd", "*.dylib", "*.c", "*.cpp"]
+packages = ["python_template_cython"]
+exclude = ["*.so", "*.pyd", "*.dylib", "python_template_cython/_compiled.c", "python_template_cython/_native.c"]
 
 [tool.hatch.build.targets.wheel]
 packages = [
