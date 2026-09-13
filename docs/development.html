@@ -259,12 +259,9 @@ make<span class="w"> </span>lint
 make<span class="w"> </span>checks
 make<span class="w"> </span>coverage
 make<span class="w"> </span>dist
-make<span class="w"> </span>test-dist
 </pre></div>
 </div>
-<p>On Windows, activate with <code class="docutils literal notranslate"><span class="pre">.venv\Scripts\activate</span></code> instead. <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">test-dist</span></code> installs
-compatible wheels in fresh environments and verifies compiled imports outside the
-checkout. It also rebuilds each sdist into a wheel and repeats those checks.</p>
+<p>On Windows, activate with <code class="docutils literal notranslate"><span class="pre">.venv\Scripts\activate</span></code> instead.</p>
 <p>To compile another <code class="docutils literal notranslate"><span class="pre">.py</span></code> or <code class="docutils literal notranslate"><span class="pre">.pyx</span></code> module, add its path to
 <code class="docutils literal notranslate"><span class="pre">[tool.hatch.build.targets.wheel.hooks.cython.options.files].targets</span></code> in
 <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>, then run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">develop</span></code> again. Only explicitly selected modules
@@ -274,7 +271,8 @@ load native binaries. Coverage measures Python code; the compiled <code class="d
 is excluded because builds do not enable Cython line tracing.</p>
 <p>For portable wheels, run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">dist-py-wheel</span></code> on the target platform. Linux wheel
 builds require Docker. Run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">dist-py-sdist</span></code> to build an sdist without compiling
-extensions. CI runs tests against each installed wheel through cibuildwheel.</p>
+extensions. CI runs tests against each installed wheel through cibuildwheel, then
+installs the built wheel and sdist in fresh environments to verify they import.</p>
 <p>To update the template from a clean branch:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>copier<span class="w"> </span>update<span class="w"> </span>--answers-file<span class="w"> </span>.copier-answers.yaml<span class="w"> </span>--trust
 </pre></div>
@@ -338,8 +336,8 @@ extensions. CI runs tests against each installed wheel through cibuildwheel.</p>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script data-searchlite-index="searchlite-index.json" defer="defer" src="../_static/searchlite.js?v=43c3c99e"></script>
-    <script data-searchlite-adopt="true" defer="defer" src="../_static/searchlite-ui.js?v=42b9d9bb"></script>
+    <script data-searchlite-index="searchlite-index.json" defer="defer" src="../_static/searchlite.js?v=a5320898"></script>
+    <script data-searchlite-adopt="true" defer="defer" src="../_static/searchlite-ui.js?v=4e4bdd69"></script>
     <script src="../_static/js/custom.js?v=956e5d78"></script>
     </body>
 </html>
