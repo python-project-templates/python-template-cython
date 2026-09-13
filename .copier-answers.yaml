@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier
-_commit: 6a0f1bb
+_commit: f43b419
 _src_path: https://github.com/python-project-templates/base.git
 add_docs: true
 add_extension: cython
