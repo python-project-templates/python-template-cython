@@ -18,16 +18,16 @@ lint-py:  ## lint Python with ruff
 	python -m ruff format --check python_template_cython
 
 lint-docs:  ## lint documentation
-	python -m mdformat --check README.md docs/development.md
-	python -m codespell_lib README.md docs/development.md
+	python -m mdformat --check README.md docs/development.md $(wildcard docs/src)
+	python -m codespell_lib README.md docs/development.md $(wildcard docs/src)
 
 fix-py:  ## autoformat Python code
 	python -m ruff check --fix python_template_cython
 	python -m ruff format python_template_cython
 
 fix-docs:  ## autoformat documentation
-	python -m mdformat README.md docs/development.md
-	python -m codespell_lib --write README.md docs/development.md
+	python -m mdformat README.md docs/development.md $(wildcard docs/src)
+	python -m codespell_lib --write README.md docs/development.md $(wildcard docs/src)
 
 lint: lint-py lint-docs  ## run all linters
 lints: lint
@@ -40,7 +40,7 @@ check-dist:  ## check python sdist and wheel with check-dist
 check-types:  ## check Python types (advisory)
 	ty check python_template_cython
 
-checks: check-dist  ## run distribution checks
+checks: check-dist check-types  ## run distribution checks
 check: checks
 
 test:  ## run Python tests
