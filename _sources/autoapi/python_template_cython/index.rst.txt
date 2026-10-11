@@ -11,6 +11,7 @@ Submodules
    :maxdepth: 1
 
    /autoapi/python_template_cython/_compiled/index
+   /autoapi/python_template_cython/_native/index
    /autoapi/python_template_cython/tests/index
 
 
@@ -28,12 +29,15 @@ Functions
 .. autoapisummary::
 
    python_template_cython.square
+   python_template_cython.add
 
 
 Package Contents
 ----------------
 
 .. py:function:: square(value: int) -> int
+
+.. py:function:: add(left: int, right: int) -> int
 
 .. py:data:: __version__
    :value: '0.1.0'

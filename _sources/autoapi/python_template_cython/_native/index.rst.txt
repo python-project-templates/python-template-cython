@@ -1,0 +1,19 @@
+python_template_cython._native
+==============================
+
+.. py:module:: python_template_cython._native
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   python_template_cython._native.add
+
+
+Module Contents
+---------------
+
+.. py:function:: add(left: int, right: int) -> int
+
